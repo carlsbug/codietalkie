@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE94A7CF2E3365A300916F91 /* codietalkie Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AE94A7CE2E3365A300916F91 /* codietalkie Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE94A7B92E3365A300916F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE94A7A32E3365A000916F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE94A7AA2E3365A100916F91;
+			remoteInfo = codietalkie;
+		};
+		AE94A7C32E3365A300916F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE94A7A32E3365A000916F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE94A7AA2E3365A100916F91;
+			remoteInfo = codietalkie;
+		};
+		AE94A7D02E3365A300916F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE94A7A32E3365A000916F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE94A7CD2E3365A300916F91;
+			remoteInfo = "codietalkie Watch App";
+		};
+		AE94A7DE2E3365A400916F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE94A7A32E3365A000916F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE94A7CD2E3365A300916F91;
+			remoteInfo = "codietalkie Watch App";
+		};
+		AE94A7E82E3365A400916F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE94A7A32E3365A000916F91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE94A7CD2E3365A300916F91;
+			remoteInfo = "codietalkie Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE94A7F42E3365A400916F91 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AE94A7CF2E3365A300916F91 /* codietalkie Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AE94A7AB2E3365A100916F91 /* codietalkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codietalkie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE94A7B82E3365A300916F91 /* codietalkieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codietalkieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE94A7C22E3365A300916F91 /* codietalkieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codietalkieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE94A7CE2E3365A300916F91 /* codietalkie Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codietalkie Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE94A7DD2E3365A400916F91 /* codietalkie Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codietalkie Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE94A7E72E3365A400916F91 /* codietalkie Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codietalkie Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AE94A7AD2E3365A100916F91 /* codietalkie */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = codietalkie;
+			sourceTree = "<group>";
+		};
+		AE94A7BB2E3365A300916F91 /* codietalkieTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = codietalkieTests;
+			sourceTree = "<group>";
+		};
+		AE94A7C52E3365A300916F91 /* codietalkieUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = codietalkieUITests;
+			sourceTree = "<group>";
+		};
+		AE94A7D22E3365A300916F91 /* codietalkie Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "codietalkie Watch App";
+			sourceTree = "<group>";
+		};
+		AE94A7E02E3365A400916F91 /* codietalkie Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "codietalkie Watch AppTests";
+			sourceTree = "<group>";
+		};
+		AE94A7EA2E3365A400916F91 /* codietalkie Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "codietalkie Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE94A7A82E3365A100916F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7B52E3365A300916F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7BF2E3365A300916F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7CB2E3365A300916F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7DA2E3365A400916F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7E42E3365A400916F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE94A7A22E3365A000916F91 = {
+			isa = PBXGroup;
+			children = (
+				AE94A7AD2E3365A100916F91 /* codietalkie */,
+				AE94A7BB2E3365A300916F91 /* codietalkieTests */,
+				AE94A7C52E3365A300916F91 /* codietalkieUITests */,
+				AE94A7D22E3365A300916F91 /* codietalkie Watch App */,
+				AE94A7E02E3365A400916F91 /* codietalkie Watch AppTests */,
+				AE94A7EA2E3365A400916F91 /* codietalkie Watch AppUITests */,
+				AE94A7AC2E3365A100916F91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE94A7AC2E3365A100916F91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE94A7AB2E3365A100916F91 /* codietalkie.app */,
+				AE94A7B82E3365A300916F91 /* codietalkieTests.xctest */,
+				AE94A7C22E3365A300916F91 /* codietalkieUITests.xctest */,
+				AE94A7CE2E3365A300916F91 /* codietalkie Watch App.app */,
+				AE94A7DD2E3365A400916F91 /* codietalkie Watch AppTests.xctest */,
+				AE94A7E72E3365A400916F91 /* codietalkie Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE94A7AA2E3365A100916F91 /* codietalkie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE94A7F52E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie" */;
+			buildPhases = (
+				AE94A7A72E3365A100916F91 /* Sources */,
+				AE94A7A82E3365A100916F91 /* Frameworks */,
+				AE94A7A92E3365A100916F91 /* Resources */,
+				AE94A7F42E3365A400916F91 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE94A7D12E3365A300916F91 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AE94A7AD2E3365A100916F91 /* codietalkie */,
+			);
+			name = codietalkie;
+			packageProductDependencies = (
+			);
+			productName = codietalkie;
+			productReference = AE94A7AB2E3365A100916F91 /* codietalkie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE94A7B72E3365A300916F91 /* codietalkieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE94A7F82E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkieTests" */;
+			buildPhases = (
+				AE94A7B42E3365A300916F91 /* Sources */,
+				AE94A7B52E3365A300916F91 /* Frameworks */,
+				AE94A7B62E3365A300916F91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE94A7BA2E3365A300916F91 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AE94A7BB2E3365A300916F91 /* codietalkieTests */,
+			);
+			name = codietalkieTests;
+			packageProductDependencies = (
+			);
+			productName = codietalkieTests;
+			productReference = AE94A7B82E3365A300916F91 /* codietalkieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE94A7C12E3365A300916F91 /* codietalkieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE94A7FB2E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkieUITests" */;
+			buildPhases = (
+				AE94A7BE2E3365A300916F91 /* Sources */,
+				AE94A7BF2E3365A300916F91 /* Frameworks */,
+				AE94A7C02E3365A300916F91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE94A7C42E3365A300916F91 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AE94A7C52E3365A300916F91 /* codietalkieUITests */,
+			);
+			name = codietalkieUITests;
+			packageProductDependencies = (
+			);
+			productName = codietalkieUITests;
+			productReference = AE94A7C22E3365A300916F91 /* codietalkieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AE94A7CD2E3365A300916F91 /* codietalkie Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE94A7F12E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie Watch App" */;
+			buildPhases = (
+				AE94A7CA2E3365A300916F91 /* Sources */,
+				AE94A7CB2E3365A300916F91 /* Frameworks */,
+				AE94A7CC2E3365A300916F91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AE94A7D22E3365A300916F91 /* codietalkie Watch App */,
+			);
+			name = "codietalkie Watch App";
+			packageProductDependencies = (
+			);
+			productName = "codietalkie Watch App";
+			productReference = AE94A7CE2E3365A300916F91 /* codietalkie Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE94A7DC2E3365A400916F91 /* codietalkie Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE94A7FE2E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie Watch AppTests" */;
+			buildPhases = (
+				AE94A7D92E3365A400916F91 /* Sources */,
+				AE94A7DA2E3365A400916F91 /* Frameworks */,
+				AE94A7DB2E3365A400916F91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE94A7DF2E3365A400916F91 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AE94A7E02E3365A400916F91 /* codietalkie Watch AppTests */,
+			);
+			name = "codietalkie Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "codietalkie Watch AppTests";
+			productReference = AE94A7DD2E3365A400916F91 /* codietalkie Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE94A7E62E3365A400916F91 /* codietalkie Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE94A8012E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie Watch AppUITests" */;
+			buildPhases = (
+				AE94A7E32E3365A400916F91 /* Sources */,
+				AE94A7E42E3365A400916F91 /* Frameworks */,
+				AE94A7E52E3365A400916F91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE94A7E92E3365A400916F91 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AE94A7EA2E3365A400916F91 /* codietalkie Watch AppUITests */,
+			);
+			name = "codietalkie Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "codietalkie Watch AppUITests";
+			productReference = AE94A7E72E3365A400916F91 /* codietalkie Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE94A7A32E3365A000916F91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					AE94A7AA2E3365A100916F91 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					AE94A7B72E3365A300916F91 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = AE94A7AA2E3365A100916F91;
+					};
+					AE94A7C12E3365A300916F91 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = AE94A7AA2E3365A100916F91;
+					};
+					AE94A7CD2E3365A300916F91 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					AE94A7DC2E3365A400916F91 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = AE94A7CD2E3365A300916F91;
+					};
+					AE94A7E62E3365A400916F91 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = AE94A7CD2E3365A300916F91;
+					};
+				};
+			};
+			buildConfigurationList = AE94A7A62E3365A000916F91 /* Build configuration list for PBXProject "codietalkie" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE94A7A22E3365A000916F91;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AE94A7AC2E3365A100916F91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE94A7AA2E3365A100916F91 /* codietalkie */,
+				AE94A7B72E3365A300916F91 /* codietalkieTests */,
+				AE94A7C12E3365A300916F91 /* codietalkieUITests */,
+				AE94A7CD2E3365A300916F91 /* codietalkie Watch App */,
+				AE94A7DC2E3365A400916F91 /* codietalkie Watch AppTests */,
+				AE94A7E62E3365A400916F91 /* codietalkie Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE94A7A92E3365A100916F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7B62E3365A300916F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7C02E3365A300916F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7CC2E3365A300916F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7DB2E3365A400916F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7E52E3365A400916F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE94A7A72E3365A100916F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7B42E3365A300916F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7BE2E3365A300916F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7CA2E3365A300916F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7D92E3365A400916F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE94A7E32E3365A400916F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE94A7BA2E3365A300916F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE94A7AA2E3365A100916F91 /* codietalkie */;
+			targetProxy = AE94A7B92E3365A300916F91 /* PBXContainerItemProxy */;
+		};
+		AE94A7C42E3365A300916F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE94A7AA2E3365A100916F91 /* codietalkie */;
+			targetProxy = AE94A7C32E3365A300916F91 /* PBXContainerItemProxy */;
+		};
+		AE94A7D12E3365A300916F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE94A7CD2E3365A300916F91 /* codietalkie Watch App */;
+			targetProxy = AE94A7D02E3365A300916F91 /* PBXContainerItemProxy */;
+		};
+		AE94A7DF2E3365A400916F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE94A7CD2E3365A300916F91 /* codietalkie Watch App */;
+			targetProxy = AE94A7DE2E3365A400916F91 /* PBXContainerItemProxy */;
+		};
+		AE94A7E92E3365A400916F91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE94A7CD2E3365A300916F91 /* codietalkie Watch App */;
+			targetProxy = AE94A7E82E3365A400916F91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AE94A7EF2E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE94A7F02E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AE94A7F22E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = codietalkie;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = codietalkie.codietalkie;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkie.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		AE94A7F32E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = codietalkie;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = codietalkie.codietalkie;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkie.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		AE94A7F62E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = codietalkie;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE94A7F72E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = codietalkie;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE94A7F92E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codietalkie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/codietalkie";
+			};
+			name = Debug;
+		};
+		AE94A7FA2E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codietalkie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/codietalkie";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE94A7FC2E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = codietalkie;
+			};
+			name = Debug;
+		};
+		AE94A7FD2E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codietalkie.codietalkieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = codietalkie;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE94A7FF2E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codietalkie.codietalkie-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codietalkie Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/codietalkie Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		AE94A8002E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codietalkie.codietalkie-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codietalkie Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/codietalkie Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		AE94A8022E3365A400916F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codietalkie.codietalkie-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "codietalkie Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		AE94A8032E3365A400916F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codietalkie.codietalkie-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "codietalkie Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE94A7A62E3365A000916F91 /* Build configuration list for PBXProject "codietalkie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A7EF2E3365A400916F91 /* Debug */,
+				AE94A7F02E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE94A7F12E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A7F22E3365A400916F91 /* Debug */,
+				AE94A7F32E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE94A7F52E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A7F62E3365A400916F91 /* Debug */,
+				AE94A7F72E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE94A7F82E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A7F92E3365A400916F91 /* Debug */,
+				AE94A7FA2E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE94A7FB2E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A7FC2E3365A400916F91 /* Debug */,
+				AE94A7FD2E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE94A7FE2E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A7FF2E3365A400916F91 /* Debug */,
+				AE94A8002E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE94A8012E3365A400916F91 /* Build configuration list for PBXNativeTarget "codietalkie Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE94A8022E3365A400916F91 /* Debug */,
+				AE94A8032E3365A400916F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE94A7A32E3365A000916F91 /* Project object */;
+}
