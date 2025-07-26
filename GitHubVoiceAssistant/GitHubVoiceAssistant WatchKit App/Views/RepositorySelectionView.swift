@@ -9,31 +9,72 @@ struct RepositorySelectionView: View {
     @State private var newRepoName = ""
     
     let onRepositorySelected: (Repository) -> Void
+    let onBackPressed: (() -> Void)?
+    
+    init(onRepositorySelected: @escaping (Repository) -> Void, onBackPressed: (() -> Void)? = nil) {
+        self.onRepositorySelected = onRepositorySelected
+        self.onBackPressed = onBackPressed
+    }
+    
+    // MARK: - Back Button Component
+    private var backButton: some View {
+        HStack {
+            if let onBackPressed = onBackPressed {
+                Button(action: onBackPressed) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                            .font(.caption)
+                        Text("Back")
+                            .font(.caption)
+                    }
+                    .foregroundColor(.blue)
+                    .padding(.vertical, 4)
+                    .padding(.horizontal, 8)
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(8)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+            
+            Spacer()
+        }
+        .padding(.bottom, 8)
+    }
     
     var body: some View {
-        NavigationView {
-            VStack {
+        VStack(spacing: 16) {
+            // Back button at top
+            backButton
+            
+            HStack {
+                Text("Select Repository")
+                    .font(.headline)
+                
                 if isLoading {
-                    ProgressView("Loading repositories...")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if repositories.isEmpty && errorMessage == nil {
-                    emptyStateView
-                } else {
-                    repositoryList
+                    ProgressView()
+                        .scaleEffect(0.8)
                 }
             }
-            .navigationTitle("Select Repository")
-            .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                loadRepositories()
+            
+            if isLoading && repositories.isEmpty {
+                ProgressView("Loading repositories...")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else if repositories.isEmpty && errorMessage == nil {
+                emptyStateView
+            } else {
+                repositoryList
             }
-            .alert("Create Repository", isPresented: $showingCreateRepo) {
-                TextField("Repository name", text: $newRepoName)
-                Button("Create") {
-                    createRepository()
-                }
-                Button("Cancel", role: .cancel) {}
+        }
+        .padding()
+        .onAppear {
+            loadRepositories()
+        }
+        .alert("Create Repository", isPresented: $showingCreateRepo) {
+            TextField("Repository name", text: $newRepoName)
+            Button("Create") {
+                createRepository()
             }
+            Button("Cancel", role: .cancel) {}
         }
     }
     

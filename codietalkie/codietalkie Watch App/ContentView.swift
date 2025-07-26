@@ -525,8 +525,11 @@ struct ContentView: View {
     @State private var generateCodeButtonState: GenerateCodeButtonState = .generate
     @State private var generatedFiles: [String] = []
     @State private var createHelloAIByLLMButtonState: CreateHelloAIByLLMButtonState = .create
+    @State private var textGenerateCodeButtonState: TextGenerateCodeButtonState = .generate
     @State private var voiceInputMode: VoiceInputMode = .regularVoice
     @State private var voiceTranscription: String = ""
+    @State private var textInput: String = ""
+    @FocusState private var isTextFieldFocused: Bool
     
     enum HelloAIButtonState {
         case create
@@ -553,6 +556,14 @@ struct ContentView: View {
         case error
     }
     
+    enum TextGenerateCodeButtonState {
+        case generate
+        case generating
+        case creating
+        case success
+        case error
+    }
+    
     enum VoiceInputMode {
         case regularVoice
         case codeGeneration
@@ -563,6 +574,7 @@ struct ContentView: View {
         case authentication
         case repositorySelection
         case voiceInput
+        case textInput
         case processing
     }
     
@@ -586,15 +598,21 @@ struct ContentView: View {
             Button(action: navigateBack) {
                 HStack(spacing: 4) {
                     Image(systemName: "chevron.left")
+                        .font(.caption)
                     Text("Back")
+                        .font(.caption)
                 }
-                .font(.caption)
                 .foregroundColor(.blue)
+                .padding(.vertical, 4)
+                .padding(.horizontal, 8)
+                .background(Color.blue.opacity(0.1))
+                .cornerRadius(8)
             }
             .buttonStyle(PlainButtonStyle())
             
             Spacer()
         }
+        .padding(.bottom, 8)
     }
     
     var body: some View {
@@ -608,6 +626,8 @@ struct ContentView: View {
                 repositorySelectionView
             case .voiceInput:
                 voiceInputView
+            case .textInput:
+                textInputView
             case .processing:
                 processingView
             }
@@ -990,6 +1010,29 @@ struct ContentView: View {
                 .buttonStyle(PlainButtonStyle())
                 .disabled(generateCodeButtonState == .generating || generateCodeButtonState == .creating)
                 
+                // Text Generate Code Button (NEW)
+                Button(action: handleTextGenerateCodeButtonTap) {
+                    HStack(spacing: 8) {
+                        if textGenerateCodeButtonState == .generating || textGenerateCodeButtonState == .creating {
+                            ProgressView()
+                                .scaleEffect(0.8)
+                        } else {
+                            Image(systemName: textGenerateCodeButtonIcon)
+                        }
+                        
+                        Text(textGenerateCodeButtonText)
+                            .font(.caption)
+                            .fontWeight(.medium)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(textGenerateCodeButtonColor)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .disabled(textGenerateCodeButtonState == .generating || textGenerateCodeButtonState == .creating)
+                
                 // Create Hello AI by LLM Button (Demo)
                 Button(action: handleCreateHelloAIByLLMButtonTap) {
                     HStack(spacing: 8) {
@@ -1102,6 +1145,9 @@ struct ContentView: View {
     
     private var repositorySelectionView: some View {
         VStack(spacing: 16) {
+            // Back button at top
+            backButton
+            
             HStack {
                 Text("Select Repository")
                     .font(.headline)
@@ -1123,7 +1169,7 @@ struct ContentView: View {
                         ForEach(repositories, id: \.self) { repo in
                             Button(repo) {
                                 selectedRepository = repo
-                                currentView = .dashboard
+                                navigateBack()
                             }
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 8)
@@ -1134,12 +1180,6 @@ struct ContentView: View {
                     }
                 }
             }
-            
-            Button("Back") {
-                currentView = .dashboard
-            }
-            .font(.caption)
-            .foregroundColor(.blue)
         }
         .padding()
     }
@@ -1343,6 +1383,114 @@ struct ContentView: View {
         }
     }
     
+    private func generateCodeFromText() {
+        guard let repository = selectedRepository,
+              let token = githubToken,
+              !textInput.isEmpty else {
+            print("Watch: ❌ Missing repository, token, or text input")
+            return
+        }
+        
+        print("Watch: ⌨️➡️🤖 Generating code from text: \(textInput)")
+        textGenerateCodeButtonState = .generating
+        currentView = .processing
+        
+        Task {
+            do {
+                // Parse repository name to get owner and repo
+                let repoComponents = repository.components(separatedBy: "/")
+                let owner: String
+                let repo: String
+                
+                if repoComponents.count == 2 {
+                    owner = repoComponents[0]
+                    repo = repoComponents[1]
+                } else {
+                    // Use the authenticated user as owner
+                    if let authenticatedUsername = githubUsername {
+                        owner = authenticatedUsername
+                        repo = repository
+                        print("Watch: Using authenticated username as owner: \(owner)")
+                    } else {
+                        // Try to get username from UserDefaults
+                        if let storedUsername = UserDefaults.standard.string(forKey: "github_username_shared") ?? 
+                                                UserDefaults.standard.string(forKey: "github_username_watch") {
+                            owner = storedUsername
+                            repo = repository
+                            githubUsername = storedUsername
+                            print("Watch: Using stored username as owner: \(owner)")
+                        } else {
+                            // Last resort: get username from GitHub API
+                            print("Watch: No username found, fetching from GitHub API...")
+                            let fetchedUsername = try await getCurrentUsername(token: token)
+                            owner = fetchedUsername
+                            repo = repository
+                            githubUsername = fetchedUsername
+                            print("Watch: Fetched username from API: \(owner)")
+                        }
+                    }
+                }
+                
+                print("Watch: Generating code from text request for \(owner)/\(repo)")
+                
+                // Step 1: Generate code using LLM with text input
+                let mockRepository = Repository(name: repository)
+                let codeResponse = try await LLMService.shared.processVoiceRequest(textInput, repository: mockRepository)
+                
+                DispatchQueue.main.async {
+                    self.textGenerateCodeButtonState = .creating
+                }
+                
+                // Step 2: Create branch
+                let timestamp = Int(Date().timeIntervalSince1970)
+                let branchName = "feature/text-generated-\(timestamp)"
+                try await createBranch(owner: owner, repo: repo, branchName: branchName, token: token)
+                
+                // Step 3: Create multiple files from LLM response
+                for file in codeResponse.files {
+                    try await createOrUpdateFile(
+                        owner: owner,
+                        repo: repo,
+                        path: file.path,
+                        content: file.content,
+                        message: codeResponse.commitMessage,
+                        branch: branchName,
+                        token: token
+                    )
+                }
+                
+                DispatchQueue.main.async {
+                    print("Watch: ✅ Successfully generated code from text with \(codeResponse.files.count) files in branch: \(branchName)")
+                    self.generatedFiles = codeResponse.files.map { $0.path }
+                    self.textGenerateCodeButtonState = .success
+                    self.currentView = .dashboard
+                    self.textInput = "" // Clear text input
+                    
+                    // Reset button after 4 seconds
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        self.textGenerateCodeButtonState = .generate
+                        self.generatedFiles = []
+                    }
+                }
+                
+            } catch {
+                DispatchQueue.main.async {
+                    print("Watch: ❌ Failed to generate code from text: \(error)")
+                    self.errorMessage = "Failed to generate code from text: \(error.localizedDescription)"
+                    self.textGenerateCodeButtonState = .error
+                    self.currentView = .dashboard
+                    self.textInput = "" // Clear text input
+                    
+                    // Reset to generate state after 5 seconds
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        self.textGenerateCodeButtonState = .generate
+                        self.errorMessage = nil
+                    }
+                }
+            }
+        }
+    }
+    
     
     private var inputModeSelectionView: some View {
         VStack(spacing: 20) {
@@ -1415,6 +1563,81 @@ struct ContentView: View {
         .padding()
     }
     
+    
+    private var textInputView: some View {
+        VStack(spacing: 20) {
+            // Back button at top
+            if !navigationStack.isEmpty {
+                backButton
+            }
+            
+            Text("Type Your Request")
+                .font(.headline)
+            
+            // Enhanced TextField with much better visibility
+            VStack(alignment: .leading, spacing: 4) {
+                Text("What would you like to create?")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+                
+                TextField("Create a calculator app", text: $textInput)
+                    .font(.system(.caption, design: .default))
+                    .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.primary.opacity(0.05))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(textInput.isEmpty ? Color.gray.opacity(0.3) : Color.blue, lineWidth: 2)
+                            )
+                    )
+                    .focused($isTextFieldFocused)
+            }
+            
+            VStack(spacing: 8) {
+                Text("Examples:")
+                    .font(.caption)
+                    .fontWeight(.medium)
+                
+                VStack(spacing: 4) {
+                    Text("\"Build a todo list\"")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                    Text("\"Make a weather app\"")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                    Text("\"Create a game\"")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+            }
+            
+            Button("Generate Code") {
+                generateCodeFromText()
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(textInput.isEmpty ? Color.gray : Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(20)
+            .buttonStyle(PlainButtonStyle())
+            .disabled(textInput.isEmpty)
+            
+            Button("Cancel") {
+                textInput = ""
+                navigateBack()
+            }
+            .font(.caption)
+            .foregroundColor(.blue)
+        }
+        .padding()
+        .onAppear {
+            // Auto-focus the text field when view appears
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                isTextFieldFocused = true
+            }
+        }
+    }
     
     private var processingView: some View {
         VStack(spacing: 20) {
@@ -1590,7 +1813,7 @@ struct ContentView: View {
     private var generateCodeButtonText: String {
         switch generateCodeButtonState {
         case .generate:
-            return "🎤 Code"
+            return "🎤 Generate Code"
         case .generating:
             return "Gen..."
         case .creating:
@@ -1636,7 +1859,7 @@ struct ContentView: View {
     private var createHelloAIByLLMButtonText: String {
         switch createHelloAIByLLMButtonState {
         case .create:
-            return "🐍 AI Gen"
+            return "🐍 Hello AI by LLM"
         case .generating:
             return "Gen..."
         case .creating:
@@ -1678,6 +1901,52 @@ struct ContentView: View {
         }
     }
     
+    // MARK: - Text Generate Code Button Properties
+    private var textGenerateCodeButtonText: String {
+        switch textGenerateCodeButtonState {
+        case .generate:
+            return "⌨️ Generate Code"
+        case .generating:
+            return "Gen..."
+        case .creating:
+            return "Making..."
+        case .success:
+            return "✅ Done!"
+        case .error:
+            return "❌ Retry"
+        }
+    }
+    
+    private var textGenerateCodeButtonIcon: String {
+        switch textGenerateCodeButtonState {
+        case .generate:
+            return "keyboard"
+        case .generating:
+            return "gear"
+        case .creating:
+            return "doc.badge.plus"
+        case .success:
+            return "checkmark.circle.fill"
+        case .error:
+            return "exclamationmark.triangle.fill"
+        }
+    }
+    
+    private var textGenerateCodeButtonColor: Color {
+        switch textGenerateCodeButtonState {
+        case .generate:
+            return .teal
+        case .generating:
+            return .gray
+        case .creating:
+            return .blue
+        case .success:
+            return .green
+        case .error:
+            return .red
+        }
+    }
+    
     // MARK: - Generate Code Button Action
     private func handleGenerateCodeButtonTap() {
         guard selectedRepository != nil else {
@@ -1688,6 +1957,17 @@ struct ContentView: View {
         // Navigate directly to voice input for code generation
         voiceInputMode = .codeGeneration
         navigateTo(.voiceInput)
+    }
+    
+    // MARK: - Text Generate Code Button Action
+    private func handleTextGenerateCodeButtonTap() {
+        guard selectedRepository != nil else {
+            print("Watch: ❌ No repository selected for text code generation")
+            return
+        }
+        
+        // Navigate directly to text input for code generation
+        navigateTo(.textInput)
     }
     
     // MARK: - Create Hello AI by LLM Button Action

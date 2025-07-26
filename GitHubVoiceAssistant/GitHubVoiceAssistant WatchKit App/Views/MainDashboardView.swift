@@ -27,10 +27,15 @@ struct MainDashboardView: View {
             case .dashboard:
                 dashboardView
             case .repositorySelection:
-                RepositorySelectionView { repository in
-                    selectedRepository = repository
-                    currentView = .dashboard
-                }
+                RepositorySelectionView(
+                    onRepositorySelected: { repository in
+                        selectedRepository = repository
+                        currentView = .dashboard
+                    },
+                    onBackPressed: {
+                        currentView = .dashboard
+                    }
+                )
             case .voiceInput:
                 VoiceInputView { transcription in
                     processVoiceRequest(transcription)
